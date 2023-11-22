@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        
+        <title>Paraguay Cultural</title>
+        <link href="css/styles.css" rel="stylesheet" />
+        <head>
+            <body>
+                <div>
+                <section class="content-section bg-primary text-white text-center" id="services">
+                    <div class="container px-4 px-lg-5">
+                        <div class="content-section-heading">
+                <h3 class="">Seguimos con tradiciones</h3>
+                <h2 class="mb-5"> Sobre musica folklórica</h2>
+            </div>
+            <div class="row gx-4 gx-lg-5">
+                
+                    <h4><strong>Música Folklórica</strong></h4>
+                    
+                    <p class="text-faded mb-0"  align="justify">
+                        La música de Paraguay comprende aquellas composiciones que forman parte de los diversos 
+                        estilos creados en el país o por paraguayos. Tiene sus orígenes en la América precolombina
+                        con los pueblos tupíes hasta la llegada de Alejo García en 1524, un punto de inflexión que
+                        abriría paso al periodo colonial en 1537 con la fundación de Asunción. La historia y evolución 
+                        de la música paraguaya tiene como principal referente a las misiones jesuíticas guaraníes, sin
+                        embargo, a pesar de la reproducción e imitación de la música barroca en las reducciones, éstas 
+                        se daban dentro de las limitaciones debido a la insuficiente instrucción en teoría musical impartida
+                        en ese entonces, aunque sí se destacan los significativos avances en la fabricación y mejora de 
+                        instrumentos musicales, como el arpa paraguaya.
+                    </p>
+                        </div>
+                    <br>
+                <p style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+                    Escucha "Galopera"
+                </p>
+                <div>
+                    <button 
+                        onclick="playOrPause()">
+                    Reproducir/pausar
+                    </button>
+                </div>
+                <script>
+                        let isPlaying = false;
+                        let audio = new Audio();
+                        audio.src="/assets/img/AUD-20230902-WA0030.m4a";
+                    function playOrPause() {
+                        if (audio.readyState < 2) {
+                            console.log("El audio no está listo aún.");
+                            if (audio.error)
+                        console.log("Error: " + 
+                        audio.error.code + "->" +
+                         audio.error.message);
+                        }
+                        if (isPlaying) {
+                            audio.pause();
+                            isPlaying = false;
+                            console.log("Pausado");
+
+                        } else {
+                            audio.play();
+                            isPlaying = true;
+                        console.log("Reproduciendo");
+                        }
+                    }
+                </script>
+                    <br>
+                 <center>
+                    <a class="btn btn-primary btn-xl" href="pag2.html"
+                    style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+                     volver</a>
+                </center>
+              
+
+                
+                
+             
+            </body>
+        </head>
